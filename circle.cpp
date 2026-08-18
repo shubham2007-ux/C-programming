@@ -1,11 +1,25 @@
 #include<iostream>
 using namespace std;
+class Circle
+{
+ float radius;
+public:
+    void accept()
+    {
+        cout<<"Enter radius:";
+        cin>>radius;
+    }
+    void calculate()
+    {
+        float area=3.14*radius*radius;
+        float circumference=2*3.14*radius;
+        cout<<"Area of circle:"<<area;
+        cout<<"\nCircumference of circle:"<<circumference;
+    }
+};
 int main()
 {
-int r;
-float pie=3.14;
-cout<<"enter the radius";
-cin>>r;
-cout<<"area="<<pie*r*r;
-cout<<"circumference="<<2*pie*r;
+    Circle c;
+    c.accept();
+    c.calculate();
 }
